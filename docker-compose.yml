@@ -27,4 +27,7 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
     ports:
       - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+      
     restart: unless-stopped
