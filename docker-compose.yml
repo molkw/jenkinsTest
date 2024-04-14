@@ -13,8 +13,8 @@ services:
   #backendapp
 
   app_achat_backend:
-    image: Ghammam:latest
-    container_name: Ghammam-devops
+    image: ghammam:latest
+    container_name: ghammam-devops
     ports:
       - "8089:8089"
     depends_on:
