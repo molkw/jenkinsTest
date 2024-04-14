@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mysqldb:
-    image: mysql:latest
+    image: "mysql:5.6"
     container_name: mysql-container
     environment:
       - MYSQL_ROOT_PASSWORD=
@@ -19,7 +19,7 @@ services:
     image: ghammam:latest
     container_name: ghammam-devops
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://db_mysql:3306/gestionfoyer
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-container:3306/gestionfoyer
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
